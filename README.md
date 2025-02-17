@@ -4,7 +4,6 @@
 <h3 Resources Used </h3>
 <ul type="circle">
  <li>Microsoft Azure</li>
- <li>Windows Power Shell</li>
 </ul>
 
 
@@ -41,12 +40,22 @@ For the use of our log repository, a Log Analytics Workspace is created within M
 
 <br> <img src="Images/Screenshot 2025-02-13 154136.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
 
-To analyze the collected log data further using a SIEM, a  Microsoft Sentinel instance is also created and connected to the log analytics workspace. Furthermore, a connection between the VM and log analytics workspace should also be created.
-
+To analyze the collected log data further using an SIEM, a  Microsoft Sentinel instance is also created and connected to the log analytics workspace. 
 
 <br> <img src="Images/Screenshot 2025-02-13 213622.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
 
+<br> Furthermore, a connection between the VM and log analytics workspace should also be created. This is done through several steps,
+<ul>
+ <li> Installing Windows Security Events in Sentinel</li>
+ <li> Installing Windows Security Events via AMA package </li>
+ <li> Configure data connection rule (allows VM to forward security logs to log analytics workspaces) </li>
+</ul>
 
+<br> <img src="Images/Screenshot 2025-02-17 170046.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
+
+<br> After the above steps are completed, the logs at the created Log Analytics Workspaces will be able to display logs regarding any activities taking place within the VM.
+
+<br> <img src="Images/Screenshot 2025-02-17 220447.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
 
 
 
