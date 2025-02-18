@@ -57,5 +57,38 @@ To analyze the collected log data further using an SIEM, a  Microsoft Sentinel i
 
 <br> <img src="Images/Screenshot 2025-02-17 220447.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
 
+<h3> Querting log repository using KQL</h3>
 
+KQL or Kusto Query Language is a tool in Microsoft Azure similar to SQL that can be used to explore and filter data.
 
+<br> KQL can be used to filter through the many security events that occur within the VM to narrow down specific events. As an example to analyze results that indicate a failed login attempt the following query can be used,
+
+<br> <img src="Images/Screenshot 2025-02-18 213548.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
+
+<h3> Uploading data to SIEM </h3>
+
+Using a table of geographical locations of IP address ranges combined with the security event logs of the VM, a mapping of the locations of the attacks can be created through the Microsoft Sentinel SIEM.
+
+<br> <img src="Images/Screenshot 2025-02-17 230830.png" height="60%" width="60%" alt="Virtual Machine creation" align="center"/>
+
+<h3> Conclusion </h3>
+
+This project successfully demonstrated how to configure a Security Information and Event Management (SIEM) system using Microsoft Sentinel within Azure. By creating a honeypot VM, disabling security measures, and logging failed login attempts, we were able to collect valuable security data and analyze it using Kusto Query Language (KQL). The integration of Microsoft Sentinel allowed us to visualize attack patterns and understand potential threats targeting the system.
+
+<h3> Reflection </h3>
+
+One of the key takeaways from this project was the importance of proactive monitoring and logging in cybersecurity. It also gave me a glimpse of the workings of real-world SIEM and SOC. This lab served me as a foundational exercise for building more advanced security monitoring solutions.
+
+<h5> Skills obtained </h5>
+
+<ul> 
+ <li> Microsoft Azure configurations </li>
+ <li> Kusto Qurey Language </li>
+ <li> Working with SOC and SIEM setup </li>
+</ul>
+
+<h5> References </h5>
+https://www.youtube.com/watch?v=g5JL2RIbThM
+<br> https://www.youtube.com/watch?v=RoZeVbbZ0o0&t=1580s
+<br> https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-transformations
+<br> https://learn.microsoft.com/en-us/azure/azure-monitor/logs/custom-fields
